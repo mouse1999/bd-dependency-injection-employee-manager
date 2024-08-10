@@ -1,5 +1,12 @@
 package main;
 
+import dagger.Component;
+
+import javax.inject.Singleton;
+
+@Singleton
+@Component(modules = {BankClientModule.class})
 interface PayrollManagerComponent {
-    // TODO Complete interface
+    EmployeePaymentDistributor provideEmployeePaymentDistributor();
+    HumanResourcesClient provideHumanResourcesClient();
 }

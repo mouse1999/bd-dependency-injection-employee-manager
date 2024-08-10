@@ -1,11 +1,13 @@
 package main;
 
+import javax.inject.Inject;
 import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Employee {
     private BigDecimal salary;
 
+    @Inject
     public Employee(BigDecimal salary) {
         this.salary = salary;
     }

@@ -1,5 +1,8 @@
 package main;
 
+import com.banking.business.payroll.client.BankClient;
+
+import javax.inject.Inject;
 import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
@@ -11,9 +14,10 @@ public class PayrollTracker {
     /**
      * Constructor for SalaryInformation class.
      */
-    public PayrollTracker() {
+    @Inject
+    public PayrollTracker(BankClient bankClient) {
         // create our third party banking client
-        bankClient = new BankClient();
+        this.bankClient = bankClient;
     }
 
     /**

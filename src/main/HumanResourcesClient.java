@@ -1,5 +1,7 @@
 package main;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +9,10 @@ import java.util.List;
 /**
  * Represents the client that connects to our HR system.
  */
+@Singleton
 public class HumanResourcesClient {
 
+    @Inject
     public HumanResourcesClient() { }
 
     /**
